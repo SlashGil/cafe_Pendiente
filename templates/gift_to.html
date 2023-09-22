@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Entregar Cafe Pendiente{% endblock title %}
+{% block nav %}
+    {% if user.is_authenticated %} {% include 'nav_with_session.html' %}
+    {% else %} {% include 'nav_without_session.html' %}
+    {% endif %}
+{% endblock nav %}
+{% block content %}
+    <div class="row">
+        {% if to is not None %}
+        <div class="card-panel red">
+            <h4 class="white-text center-align">El cafe no puede ser regalado a {{ to }} porque ya le fue entregado uno en menos de 8
+                horas </h4>
+        </div>
+        {% endif %}
+        <div class="col s12 m8 l4 offset-m2 offset-l4">
+            <div class="card">
+                <div class="card-action white-text">
+                    <h3>Entrega de Cafe Pendiente</h3>
+                </div>
+                <form method="post">
+
+
+                    <div class="card-content">
+                        <div class="form-field">
+                            {% csrf_token %}
+                            <label for="username">Entregado a</label>
+                            {{ form.giftTo }}
+                            {{ form.time }}
+                        </div>
+                        <br>
+                        <div class="form-field">
+                            <button class="btn-large waves-effect waves-dark deep-purple darken-3" style="width:100%;">
+                                Entregar
+                            </button>
+                        </div>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

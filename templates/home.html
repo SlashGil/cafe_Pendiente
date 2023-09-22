@@ -1,0 +1,28 @@
+{% extends 'base.html' %}  }}
+{% block title %}Cafe Pendiente{% endblock title %}
+{% block nav %}
+    {% if user.is_authenticated %} {% include 'nav_with_session.html' %}
+    {% else %} {%  include 'nav_without_session.html' %}
+    {% endif %}
+{% endblock nav %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <h1 class="center-align">Total de cafes pendientes: </h1>
+                <h2 class="center-align">{{ pendient_coffees.count }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <h1 class="center-align">Total de cafes entregados: </h1>
+                <h2 class="center-align">{{ delivered_coffees.count }}</h2>
+            </div>
+        </div>
+    </div>
+    {% include 'fab.html' %}
+{% endblock content %}
