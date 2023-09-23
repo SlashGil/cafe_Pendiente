@@ -76,8 +76,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cafePendiente',
-        'USER': 'cafePendiente',
-        'PASSWORD': 'R0taract',
+        'USER': 'slashgil',
+        'PASSWORD': 'rotaract',
         'HOST': 'localhost',
         'PORT': '3306',
     }
