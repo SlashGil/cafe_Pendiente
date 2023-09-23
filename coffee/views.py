@@ -8,14 +8,16 @@ from coffee.models import Coffee
 
 # Create your views here.
 def home(request):
-    pendient_coffees = Coffee.objects.all().filter(time__isnull=True)
-    delivered_coffees = Coffee.objects.all().exclude(giftTo="")
-    context = {
-        "pendient_coffees": pendient_coffees,
-        "delivered_coffees": delivered_coffees,
-        "session": request.user
-    }
-    return render(request, "home.html", context)
+    if request.user.is_authenticated:
+        pendient_coffees = Coffee.objects.all().filter(time__isnull=True)
+        delivered_coffees = Coffee.objects.all().exclude(giftTo="")
+        context = {
+            "pendient_coffees": pendient_coffees,
+            "delivered_coffees": delivered_coffees,
+            "session": request.user
+        }
+        return render(request, "home.html", context)
+    else : return redirect('account/login')
 
 
 def add(request):
