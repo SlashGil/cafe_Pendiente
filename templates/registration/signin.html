@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Registro de Usuario {% endblock title %}
 {% block nav %}
-    {% include 'nav_login.html' %} 
+    {% include 'nav_login.html' %}
 {% endblock nav %}
 {% block content %}
     <div class="row">
@@ -20,39 +20,32 @@
                             {{ form.email }}
                         </div>
                         <br>
-
-                        <div class="card-content">
-                            <div class="form-field">
-                                {% csrf_token %}
-                                <label for="name">Nombre</label>
-                                {{ form.name }}
-                            </div>
-                            <br>
-
-                            <div class="card-content">
-                                <div class="form-field">
-                                    {% csrf_token %}
-                                    <label for="username">Nombre de usuario</label>
-                                    {{ form.username }}
-                                </div>
-                                <br>
-
-                                <div class="form-field">
-                                    <label for="password">Password</label>
-                                    {{ form.password }}
-                                </div>
-                                <br>
-
-
-                                <div class="form-field">
-                                    <button type="submit" class="btn-large waves-effect waves-dark deep-purple darken-3"
-                                            style="width:100%;">Registrar
-                                    </button>
-                                </div>
-                                <br>
-                                <a href="login">Si ya tienes una cuenta da click aquí</a>
-                                <br>
-                            </div>
+                        <div class="form-field">
+                            {% csrf_token %}
+                            <label for="name">Nombre</label>
+                            {{ form.name }}
+                        </div>
+                        <br>
+                        <div class="form-field">
+                            {% csrf_token %}
+                            <label for="username">Nombre de usuario</label>
+                            {{ form.username }}
+                        </div>
+                        <br>
+                        <div class="form-field">
+                            <label for="password">Password</label>
+                            {{ form.password }}
+                        </div>
+                        <br>
+                        <div class="form-field">
+                            <button type="submit" class="btn-large waves-effect waves-dark deep-purple darken-3"
+                                    style="width:100%;">Registrar
+                            </button>
+                        </div>
+                        <br>
+                        <a href="login">Si ya tienes una cuenta da click aquí</a>
+                        <br>
+                    </div>
                 </form>
             </div>
         </div>
