@@ -21,11 +21,13 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 import coffee.views
+import userManagement.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', coffee.views.home),
     path('account/', include("django.contrib.auth.urls")),
+    path('account/signin',userManagement.views.CreateUser),
     path('add', coffee.views.add),
     path('gift',coffee.views.gift_to)
 ]

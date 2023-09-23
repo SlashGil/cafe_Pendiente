@@ -10,7 +10,7 @@ from userManagement.models import User
 class CreateUser(LoginRequiredMixin, CreateView):
     model = User
     fields = ['email', 'first_name', 'last_name', 'password']
-    template_name = 'create_user.html'
+    template_name = 'registration/signin.html'
     success_url = reverse_lazy('home')
 
 
