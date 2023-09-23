@@ -77,8 +77,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cafePendiente',
         'USER': 'slashgil',
-        'PASSWORD': 'rotaract',
-        'HOST': 'localhost',
+        'PASSWORD': 'R0taract',
+        'HOST': 'slashgil.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
