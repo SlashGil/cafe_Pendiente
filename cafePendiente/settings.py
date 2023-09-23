@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'cafePendiente.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cafePendiente',
+        'NAME': 'slashgil$cafependiente',
         'USER': 'slashgil',
         'PASSWORD': 'R0taract',
         'HOST': 'slashgil.mysql.pythonanywhere-services.com',
