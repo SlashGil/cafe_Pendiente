@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Acceso de Usuario{% endblock title %}
+{% block nav %}
+    {% include 'nav_login.html' %}
+{% endblock nav %}
+{% block content %}
+    <div class="row">
+        <div class="col s12 m8 l4 offset-m2 offset-l4">
+            <div class="card">
+
+                <div class="card-action center-align">
+                    <h3>Cerrar Sesión</h3>
+                </div>
+                <form method="post">
+                    <div class="card-content">
+                        <h5>Gracias por tu colaboración en este proyecto, tu sesión ha sido finalizada</h5>
+                        <div class="form-field">
+                            <a href="/" class="btn-large waves-effect waves-dark deep-purple darken-3 btn" style="width:100%;">Volver al inicio</a>
+                        </div>
+                        <br>
+                        <a href="signin">Si no tienes un usuario y deseas registrarte da click aqui</a>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

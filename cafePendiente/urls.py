@@ -29,5 +29,5 @@ urlpatterns = [
     path('account/', include("django.contrib.auth.urls")),
     path('account/signin',userManagement.views.CreateUser),
     path('add', coffee.views.add),
-    path('gift',coffee.views.gift_to)
+    path('gift', coffee.views.gift_to)
 ]
